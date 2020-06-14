@@ -6,6 +6,9 @@ WORKDIR /app
 # We copy these files from our current application to the /app container
 COPY Gemfile Gemfile.lock ./
 # We install all the dependencies
+
+RUN gem install bundler:2.1.4
+
 RUN bundle install
 # We copy all the files from our current application to the /app container
 COPY . .
