@@ -10,8 +10,12 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+   adapter: mysql2
+   database: marktestdev
+   username: nikechan
+   password: marksixdev
+   host: marksixdev.cod9i8ponzh5.ap-southeast-1.rds.amazonaws.com
+   port: 3306
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
